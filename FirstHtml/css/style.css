@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#navigation {
+  list-style: none;
+  background-color: #333;
+  overflow: hidden;
+}
+
+#navigation li {
+  float: left;
+}
+
+#navigation li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navigation li a:hover {
+  background-color:#000;
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+}
+
+
+
