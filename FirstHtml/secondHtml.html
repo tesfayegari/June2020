@@ -8,55 +8,120 @@
 </head>
 
 <body>
-  <!-- These are headings from h1 to h4 -->
-  <h1>First Heading 1</h1>
-  <h2>First Heading 2</h2>
-  <h3>First Heading 3</h3>
-  <h4>First Heading 4</h4>
-  <!-- Paragraph and new line-->
-  <p>Some HTML elements have no content (like the meta tag in head element).
-    <br>
-    These elements are called empty elements , visit <a href="https://google.com">Google</a>.
-  </p>
-  <p> Empty elements do not have an end tag!</p>
-  <!-- Link has text and url represented by a tag -->
-  <a href="https://google.com" target="_blank">Visit Google</a>
+  <div id="containerDiv">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact us</a></li>
+      <li><a href="#">Our News</a></li>
+    </ul>
+    <!-- These are headings from h1 to h4 -->
+    <h1>First Heading 1</h1>
+    <!-- Paragraph and new line-->
+    <h2>Why do we use it?</h2>
+    <p>
+      It is a long established fact that a reader will be distracted by the readable content of a page when looking at
+      its
+      layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+      using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web
+      page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
+      sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on
+      purpose (injected humour and the like).
+    </p>
+    <p class="primary"> Empty elements do not have an end tag!</p>
 
-  <!-- Image Element  -->
-  <br>
-  <img src="http://ecx.images-amazon.com/images/I/51RntoCHFYL.jpg" width="200px" alt="Tesfayes Puppy">
+    <div id="secondHeading" class="primary">
+      <h3>First Heading 3</h3>
+      <h4>First Heading 4</h4>
+    </div>
+    <!-- Link has text and url represented by a tag -->
+    <a href="https://google.com" target="_blank">Visit Google</a>
 
-  <!-- Challenge Make image clickable like Logo -->
-  <!-- Submit Your challenge next Tuesday  -->
+    <!-- Image Element  -->
+    <div>
+      <img src="http://ecx.images-amazon.com/images/I/51RntoCHFYL.jpg" width="200px" alt="Tesfayes Puppy">
+    </div>
+    <h3>Where does it come from?</h3>
+    <p>
 
-  <!-- Bullet and Numbers  -->
-  <!-- Unordered list is called bullet and ordered list is called numbers  -->
-  <h1>What is HTML?</h1>
-  <ul>
-    <li>HTML stands for Hyper Text Markup Language</li>
-    <li>HTML is the standard markup language for creating Web pages</li>
-    <li>HTML describes the structure of a Web page</li>
-    <li>HTML consists of a series of elements</li>
-    <li>HTML elements tell the browser how to display the content</li>
-    <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
-    </li>
-  </ul>
+      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+      literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+      College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+      going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes
+      from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
+      written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first
+      line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+    </p>
 
-  <!-- Ordered Lists  -->
-  <ol type="1">
-    <li>HTML stands for Hyper Text Markup Language</li>
-    <li>HTML is the standard markup language for creating Web pages</li>
-    <li>HTML describes the structure of a Web page</li>
-    <ol type="i">
-      <li>item 1</li>
-      <li>item 2</li>
-      <li>item 3</li>
+    <!-- Image Galleries  -->
+    <h3>Galleries</h3>
+    <div id="galleries">
+      <img src="https://p.bigstockphoto.com/jdVZ6zirQdGjAE2vCmmK_bigstock-A-Telltale-Sign-Of-Summer-Hyd-272112430.jpg"
+        alt="">
+      <img src="https://www.gettyimages.com/gi-resources/images/500px/983794168.jpg" alt="">
+      <img src="https://www.w3schools.com/howto/img_snow.jpg" alt="">
+    </div>
+    <!-- Unordered list is called bullet and ordered list is called numbers  -->
+    <h1>What is HTML?</h1>
+    <ul>
+      <li>HTML stands for Hyper Text Markup Language</li>
+      <li>HTML is the standard markup language for creating Web pages</li>
+      <li>HTML describes the structure of a Web page</li>
+      <li>HTML consists of a series of elements</li>
+      <li>HTML elements tell the browser how to display the content</li>
+      <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link",
+        etc.
+      </li>
+    </ul>
+
+    <!-- Ordered Lists  -->
+    <ol type="1">
+      <li>HTML stands for Hyper Text Markup Language</li>
+      <li>HTML is the standard markup language for creating Web pages</li>
+      <li>HTML describes the structure of a Web page</li>
+      <ol type="i">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+      </ol>
+      <li>HTML consists of a series of elements</li>
+      <li>HTML elements tell the browser how to display the content</li>
+      <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link",
+        etc.
+      </li>
     </ol>
-    <li>HTML consists of a series of elements</li>
-    <li>HTML elements tell the browser how to display the content</li>
-    <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
-    </li>
-  </ol>
+
+    <!-- clickable image use a with img -->
+    <a href="https://microsoft.com/" target="_blank">
+      <img width="60px"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Microsoft_Office_SharePoint_%282018%E2%80%93present%29.svg/1200px-Microsoft_Office_SharePoint_%282018%E2%80%93present%29.svg.png"
+        alt="Sharepoint">
+    </a>
+
+    <!-- Tables table, tr, td -->
+    <table border="1">
+      <tr>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+      </tr>
+      <tr>
+        <td>Tesfaye Gari</td>
+        <td>email@tesfaye.com</td>
+        <td>443-555-6666</td>
+      </tr>
+      <tr>
+        <td>Tesfaye Gari</td>
+        <td colspan="2">email@tesfaye.com</td>
+      </tr>
+    </table>
+
+    <!-- Paragraph and new line-->
+    <p>Some HTML elements have no content <span>(like the meta tag in head element).</span>
+      These elements are called empty elements , visit <a href="https://google.com">Google</a>.
+    </p>
+  </div>
+
 
 </body>
 
