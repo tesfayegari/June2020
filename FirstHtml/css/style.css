@@ -1,8 +1,28 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  background-color: #e6ffff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, p {
+  margin-bottom: 0.5em; /* 0.5em = 8px */
+  padding: 0 0.5em ;
+}
+img {
+  width: 100%;
+}
+h1, h2, h3, h4 { color: #e64d10;}
+h3{
+  text-align: center;
+}
+#containerDiv {
+  position: relative;
+}
 #navigation {
   list-style: none;
   background-color: #333;
@@ -24,12 +44,102 @@
 #navigation li a:hover {
   background-color:#000;
 }
-img {
+#secondHeading {
+ margin: 0.5em;
+ border: #333 solid 1px;
+ border-radius: 6px;
+ padding: 8px;
+ background-color: aqua;
+ text-align: center;
+}
+#secondHeading h3, 
+#secondHeading h4 {
+   width: 45%;
+   display: inline-block;
+   padding: 14px 0;
+   text-align: center;
+   font-size: 1.3em;
+   background-color: blanchedalmond;
+   border-radius: 8px;
+ }
+
+ #secondHeading h3:hover,
+ #secondHeading h4:hover {
+   color: #fff;
+   background-color: #000;
+   cursor: pointer;
+ }
+#googleLink {
+  display: block;
+  font-size: 1.2em;
+  text-decoration: none;
+  text-align: center;
+  padding: 1em;
+  border: gray 1px solid;
+  max-width: 200px;
+  margin: auto;
+  border-radius: 8px;
+  background-color: #000;
+  color: #fff;
+  margin-bottom: 1em;
+}
+#googleLink:hover {
+  background-color: #777;
+}
+#puppy {
+  width: 20%;
+  display: inline-block;
+}
+#puppy img {
+  border-radius: 20%;
+  border: #ddd solid 1px; 
+  margin: 8px;
+  padding: 3px;
+}
+
+.rightSection {
+  width: 78%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 1em;
+}
+.rightSection h3 {
+  text-align: left;
+}
+#galleries {
+  text-align: center;
+ 
+}
+#galleries img {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
-  width: 250px;
+  width: 30%;
+  height: 230px;
+} 
+
+ul, ol {
+  padding-left: 3em;
 }
+
+#spLogo {
+  position:absolute;
+  width: 70px;
+  right: 3px;
+  top: 0;
+}
+
+footer { 
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+footer ul {
+  list-style: none;
+  width: 45%;
+  display: inline-block;
+}
+
 
 
 
