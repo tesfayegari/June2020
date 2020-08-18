@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Demo 2 Class Aug 15</title>
+</head>
+
+<body>
+  <div id="myContainer">
+    <h1 >Learn JS with Tesfaye Display Sum of the two numbers</h1>
+    <input type="number"  placeholder="Enter Number 1" id="number1">
+    <input type="number" placeholder="Enter Number 2" id="number2">
+    <h3 id="result"></h3>
+    <input type="button" onclick="customCalculator()" id="submit" value="Submit">
+  </div>
+
+  <script>
+    function customCalculator() {
+       var num1 = document.getElementById('number1').value*1; //document.getElementById('number1').value*1;
+       var num2 = document.getElementById('number2').value*1;
+       var result = num1 + num2;
+       document.getElementById('result').innerHTML = 'Sum of the two numbers is ' + result;
+    }
+
+  </script>
+</body>
+
+</html>

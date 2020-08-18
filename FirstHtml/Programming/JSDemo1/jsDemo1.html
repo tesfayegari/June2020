@@ -18,24 +18,126 @@
   </div>
 
   <script>
-     var  number1 = 50; 
-     var number2=80;
+    var number1 = 50;
+    var number2 = 80;
     //  alert("Hi this is \"special\" word here.")
-    var valid= false;
+    var valid = false;
     var notNumber = "5";
     var student1 = "Abay";
     var student2 = "Yohannes";
-    var student3 = "Yodi";    
-    
-    //x++;  x = x + 1;
-    var x=6;
-    var y=8;
-    var c = ++y;
-    var z = x++ + ++y;
+    var student3 = "Yodi";
 
-    var students = [4,"Abay", "Yohannes", "Yodi"];
+    //x++;  x = x + 1;
+    var x = 6; // x=6, (y,z,c doesnt exist)
+    var y = 8; //x=6, y=8, c & z doesnt exit
+    var c = ++y; // x=6, y=9, c=9
+    var z = x++ + ++y; //x=7, y=10, c=9, z=16
+
+    var students = ["Banner", "Hailu", "Abay", "Yohannes", "Yodi", "Abrish"];
+
+
+    // Conditional statement 
+    var condition = false;
+
+    // if(condition){
+    //   alert('This is when condition is true');
+    // }else{
+    //   alert('This is when the condition is false');
+    // }
+
+    var month = 10;
+
+    if (month == 1) {
+      console.log('Month is January');
+    } else if (month == 2) {
+      console.log('Month is February');
+    } else if (month == 3) {
+      console.log('Month is March');
+    } else {
+      console.log('Month larger than march or not valid');
+    }
+
+    // Looping For loop 
+    // for(initilization; condition; action) {
+    //   //statements 
+    // }
+
+    for (var index = 0; index < students.length; index++) {
+      console.log('Student ' + index + " = " + students[index]);
+    }
+
+    console.log('Different way of doing same');
+    for (var index in students) {
+      console.log('Student ' + index + " = " + students[index]);
+    }
+
+    // JS Versions 
+    /**
+     * current version ECMA Script 6/7
+     * Current Supported version of JS is ECMAScript 5
+     * **/
+    console.log("ECMA 6 way of looping")
+    for (let student of students) {
+      console.log(student);
+    }
+
+    console.log("For each display of looping")
+    students.forEach(s => console.log(s));
+    // alert('This is annoying');
+
+
+    //confirm("Are you sure you want to do this?");
+
+    //var name = prompt('Enter Your Name:');
+
+    console.log('You entered ', name);
+    // Functions 
+    // function functionName (parameters) {
+    //   return value;
+    // }
+    //Calculate age function 
+    function calculateAge(date) {
+      var today = new Date();
+      var thisYear = today.getFullYear();
+      var dob = new Date(date);
+      var birthYear = dob.getFullYear();
+
+      return thisYear - birthYear;
+    }
+
+    // Objects 
+    var st1 = {
+      name: 'Yodi Hunde',
+      email: 'email@yodi.com',
+      phone: '333-555-4444',
+      age: 22,
+      sayHi: function () { alert('Hi ' + this.name); }
+    }
+
+
+    // JSON
+    var st2 = {
+      'name': 'Yodi Hunde',
+      'email': 'email@yodi.com',
+      'phone': '333-555-4444',
+      'age': 22
+    }
+
+
+
+    console.log(st1.name + ' Phone : ' + st1.phone);
+
+    var std1 = { name: 'Abrish', phone: '444-555-6666', email: 'abrish@email.com' };
+    var std2 = { name: 'Yohannes', phone: '645-345-6534', email: 'yohannes@email.com' };
+    var myStudebnts = [
+      { name: 'Abrish', phone: '444-555-6666', email: 'abrish@email.com' },
+      { name: 'Yohannes', phone: '645-345-6534', email: 'yohannes@email.com' }
+    ];
+
+    console.log(myStudebnts[0].phone);
+
   </script>
-  
+
 </body>
 
 </html>
