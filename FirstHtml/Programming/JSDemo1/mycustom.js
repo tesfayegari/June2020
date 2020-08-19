@@ -6,11 +6,20 @@ function customCalculator() {
   $('#result').html('Sum of the two numbers is ' + result);
 }
 
+function getLists(){
+  var listsUrl ='https://tgarillc.sharepoint.com/sites/playground/hr/_api/web/lists?$select=Title,Hidden,ItemCount'
+  return $.ajax({
+    url: listsUrl,
+    method: "GET",
+    headers: { "Accept": "application/json; odata=nometadata" },
+    data: jsonData
+  });
+}
 function getListItems(listName){
   var listItemsUrl =''
   return $.ajax({
     url: listItemsUrl,
-    method: "POST",
+    method: "GET",
     headers: { "Accept": "application/json; odata=nometadata" },
     data: jsonData
   });
