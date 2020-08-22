@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<div class="employeees container-fluid mt-5">
+
+  <div class="row" id="employees">
+
+  </div>
+
+</div>
+
+<script>
+
+  //using jQuery Ajax the following returns Promise to All List Items from list name
+  function readItems(listName) {
+    var siteurl = _spPageContextInfo.webAbsoluteUrl; //only for classic sites returns Web URL
+    return $.ajax({
+      url: siteurl + "/_api/web/lists/getbytitle('" + listName + "')/items",
+      method: "GET",
+      headers: { "Accept": "application/json; odata=nometadata" }
+    });
+  }
+
+  //render Employee custom function which creates an html and injects to the above DOM with id employees
+  function renderEmployee(employee) {
+
+    $('#employees').html(`
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top"
+          src="https://tgarillc.sharepoint.com/sites/playground/Galleries/${employee.PictureFileName}"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">${employee.Title}</h5>
+          <ul class="list-group">
+            <li class="list-group-item">${employee.Phone}</li>
+            <li class="list-group-item">${employee.Email}</li>
+            <li class="list-group-item">${employee.Department}</li>
+          </ul>
+          <a href="#" class="btn btn-primary mt-2">View Profile</a>
+        </div>
+      </div>
+    </div>
+    `);
+  }
+
+  //end of renderEmployee
+
+  $(document).ready(function () {
+    //call readItems function by passing listName parameter which will return a promise
+    readItems('MTMEmployees')
+      .then(function (response) {
+        //data is successfully returned here
+        console.log('Data is back from first call', response);
+        var employees = response.value; //array of list items 
+
+        var emp = employees[0];
+
+        renderEmployee(emp);
+
+        //end of success 
+      }, function (error) { console.error('Oops error occured', error); });
+
+
+
+
+
+  });
+
+</script>
