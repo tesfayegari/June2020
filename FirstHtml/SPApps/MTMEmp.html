@@ -22,9 +22,19 @@
   }
 
   //render Employee custom function which creates an html and injects to the above DOM with id employees
-  function renderEmployee(employee) {
+  function renderEmployees(employees) {
+    var emplsHtml = '';
 
-    $('#employees').html(`
+    for(var index in employees){
+      emplsHtml += buildEmployeeHtml(employees[index]);
+    }
+
+    $('#employees').html(emplsHtml);
+  }
+
+  //Build Employee HTML 
+  function buildEmployeeHtml(employee) {
+    return `
     <div class="col-md-4">
       <div class="card">
         <img class="card-img-top"
@@ -41,7 +51,7 @@
         </div>
       </div>
     </div>
-    `);
+    `;
   }
 
   //end of renderEmployee
@@ -54,9 +64,9 @@
         console.log('Data is back from first call', response);
         var employees = response.value; //array of list items 
 
-        var emp = employees[0];
+        // var emp = employees[0];
 
-        renderEmployee(emp);
+        renderEmployees(employees);
 
         //end of success 
       }, function (error) { console.error('Oops error occured', error); });
