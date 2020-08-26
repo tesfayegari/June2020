@@ -26,8 +26,18 @@ All Items in a list
 _api/web/lists/getbytitle('ListTitle')/Items
 Example: /_api/web/lists/getbytitle('HRLeave')/Items
 
+Top N items in a list
+_api/web/lists/getbytitle('ListTitle')/Items?$top=N
+Example: /_api/web/lists/getbytitle('HRLeave')/Items?$top=9
+
+
 Get only one item by its ID
 /_api/web/lists/getbytitle('ListTitle')/Items(ID)
 Example: /_api/web/lists/getbytitle('ListTitle')/Items(11)
 
+Sorting: use oData $orderby=columnName ASC/DESC
+Ex Sort by Title: /_api/web/lists/getbytitle('HRLeave')/Items?$top=9&$orderby=Title asc
+Example most recent: /_api/web/lists/getbytitle('MTMEmployees')/items?$top=9&$orderby=Modified desc
 
+Example: Get top 9 items filter where Department=IT
+/_api/web/lists/getbytitle('MTMEmployees')/items?$filter=Department eq 'Customer Service'&$top=9&$orderby=Title
