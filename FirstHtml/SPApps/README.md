@@ -18,6 +18,12 @@ $filter=Property operator value
 Example $filter=Hidden eq false
 Example 2. /_api/web/lists?$select=Title,Hidden,ItemCount&$filter=Title eq 'MTM Links'
 
+Other operators are ne (not equal), le (less than), gt (greater than), .... etc
+Contains can be done by using substringof(value, ColumnName) returns true if the value is contained in the column Name
+Example: $filter=substringof('Lori',Title) = if Title contains the word Lori return true 
+Ex. /_api/web/lists/getbytitle('MTMEmployees')/items?$filter=substringof('Lori',Title)
+
+
 Information in one list
 _api/web/lists/getbytitle('ListTitle')
 Example: /_api/web/lists/getbytitle('HRLeave')
