@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "new-emp-react-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/newEmpReact/NewEmpReactWebPart.js",
+          "manifest": "./src/webparts/newEmpReact/NewEmpReactWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "NewEmpReactWebPartStrings": "lib/webparts/newEmpReact/loc/{locale}.js"
+  }
+}
