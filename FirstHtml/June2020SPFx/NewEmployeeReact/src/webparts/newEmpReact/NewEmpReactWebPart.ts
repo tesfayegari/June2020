@@ -6,6 +6,7 @@ import {
   PropertyPaneTextField
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
+import { SPComponentLoader } from "@microsoft/sp-loader";
 
 import * as strings from 'NewEmpReactWebPartStrings';
 import NewEmpReact from './components/NewEmpReact';
@@ -13,15 +14,19 @@ import { INewEmpReactProps } from './components/INewEmpReactProps';
 
 export interface INewEmpReactWebPartProps {
   description: string;
+  title: string;
 }
 
 export default class NewEmpReactWebPart extends BaseClientSideWebPart<INewEmpReactWebPartProps> {
 
   public render(): void {
+    SPComponentLoader.loadCss('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css');
+    
     const element: React.ReactElement<INewEmpReactProps> = React.createElement(
       NewEmpReact,
       {
-        description: this.properties.description
+        description: this.properties.description,
+        title: this.properties.title
       }
     );
 
@@ -30,6 +35,10 @@ export default class NewEmpReactWebPart extends BaseClientSideWebPart<INewEmpRea
 
   protected onDispose(): void {
     ReactDom.unmountComponentAtNode(this.domElement);
+  }
+
+  protected get disableReactivePropertyChanges(): boolean {
+    return true;
   }
 
   protected get dataVersion(): Version {
@@ -49,6 +58,9 @@ export default class NewEmpReactWebPart extends BaseClientSideWebPart<INewEmpRea
               groupFields: [
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel
+                }),
+                PropertyPaneTextField('title', {
+                  label: 'Title'
                 })
               ]
             }

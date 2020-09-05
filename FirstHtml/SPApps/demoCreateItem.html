@@ -1,0 +1,34 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  function createItem(data) {
+    return $.ajax({
+      url: "https://tgarillc.sharepoint.com/sites/playground/_api/web/lists/getbytitle('MTMEmployees')/items",
+      method: "POST",
+      data: JSON.stringify(data),
+      headers: {
+        'accept': 'application/json;odata=verbose',
+        "X-RequestDigest": $("#__REQUESTDIGEST").val(),
+        'content-type': 'application/json;odata=verbose',
+      }
+    });
+  }
+</script>
+
+
+
+<script>
+  //testing
+
+  var data = {
+    __metadata: { 'type': 'SP.Data.MTMEmployeesListItem' },
+    Title: 'Tesfaye Gari',
+    Department: 'Sales',
+    Phone: '444-555-6777',
+    Email: 'test@email.com',
+    PictureFileName: 'ricky-higby-5jqNqM1Npsg-unsplash.jpg'
+  };
+
+  createItem(data)
+    .then(response => console.log('Item Created Successuflly', response),
+      error => console.error('Oops error occured', error));
+</script>
